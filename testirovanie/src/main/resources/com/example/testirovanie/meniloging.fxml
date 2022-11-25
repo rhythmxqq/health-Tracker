@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testirovanie.Loging">
+   <children>
+      <Button fx:id="enter_button" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#button_enter_menu" text="Enter">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <TextField fx:id="login_table" layoutX="197.0" layoutY="136.0" prefHeight="25.0" prefWidth="207.0" promptText="login" style="-fx-background-color: #fafafa;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #85BB65;">
+         <opaqueInsets>
+            <Insets bottom="10.0" top="5.0" />
+         </opaqueInsets>
+         <children>
+            <Label layoutX="245.0" layoutY="23.0" text="health">
+               <font>
+                  <Font name="ALS Malina Regular" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_reg" layoutX="492.0" layoutY="14.0" mnemonicParsing="false" onAction="#reg_Action" text="Registration">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <PasswordField fx:id="password_table" layoutX="198.0" layoutY="209.0" prefHeight="38.0" prefWidth="207.0" promptText="password">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
