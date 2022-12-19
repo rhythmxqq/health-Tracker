@@ -58,21 +58,15 @@ public class MainMenu extends Configs implements Initializable{
 
     ObservableList<Products> listM = FXCollections.observableArrayList();
 
-    @FXML
-    private Button exitButton;
     JOptionPane JOptionPane;
 
     @FXML
-    void exitClick(ActionEvent event) {
-        System.exit(0);
-    }
-
-    @FXML
     void add_product_button(ActionEvent event){
+        boolean result = text_prosuctName.getText().matches("[0-9]*") || text_callories_product.getText().matches("[A-zА-я]*") || text_weight_product.getText().matches("[A-zА-я]*");
         if(text_prosuctName.getText() == "" && text_weight_product.getText() == "" &&  text_callories_product.getText() == "" && text_prosuctName.getText().length() < 3){
             JOptionPane.showMessageDialog(null,"данные  не введены");
         }
-        else if(text_prosuctName.getText().equals("12345")){
+        else if(result){
             JOptionPane.showMessageDialog(null,"данные введены неправильно");
         }
         else{
@@ -97,6 +91,9 @@ public class MainMenu extends Configs implements Initializable{
                 }
 
                 list_products.setItems(listM);
+                text_weight_product.clear();
+                text_callories_product.clear();
+                text_prosuctName.clear();
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             } catch (SQLException e) {

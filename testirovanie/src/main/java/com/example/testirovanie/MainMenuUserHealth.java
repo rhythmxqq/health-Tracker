@@ -46,10 +46,6 @@ public class MainMenuUserHealth implements Initializable {
     @FXML
     private Button eating_button;
 
-
-    @FXML
-    private Button exitButton;
-
     @FXML
     private TableColumn<?, ?> id_grames;
 
@@ -118,18 +114,21 @@ public class MainMenuUserHealth implements Initializable {
             }
         }
         }
-
-
     @FXML
     void eating_product_button(ActionEvent event)  {
-        try {
-            addAllCallories();
-            labelTextAll();
+        boolean result = text_grame_product.getText().matches("[0-9]*");
+        if(result) {
+            try {
+                addAllCallories();
+                labelTextAll();
+            }
+            catch (IOException ex){
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
-        catch (IOException ex){
-            JOptionPane.showMessageDialog(null,"данные введены неправильно");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        else{
+            JOptionPane.showMessageDialog(null,"данные введены неверно");
         }
     }
 
@@ -201,9 +200,5 @@ public class MainMenuUserHealth implements Initializable {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
-    }
-    @FXML
-    void exitClick(ActionEvent event) {
-        System.exit(0);
     }
 }

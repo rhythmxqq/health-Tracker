@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,7 +16,7 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <TextField fx:id="login_table" layoutX="197.0" layoutY="136.0" prefHeight="25.0" prefWidth="207.0" promptText="login" style="-fx-background-color: #fafafa;">
+      <TextField fx:id="login_table" cache="true" layoutX="197.0" layoutY="136.0" prefHeight="25.0" prefWidth="207.0" promptText="login" style="-fx-background-color: #fafafa;">
          <font>
             <Font size="17.0" />
          </font>
@@ -34,6 +36,11 @@
                   <Font size="15.0" />
                </font>
             </Button>
+            <ImageView fitHeight="25.0" fitWidth="33.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/user3.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <PasswordField fx:id="password_table" layoutX="198.0" layoutY="209.0" prefHeight="38.0" prefWidth="207.0" promptText="password">

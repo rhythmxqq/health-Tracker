@@ -40,10 +40,11 @@ public class RegController {
 
     @FXML
     void reg_button_enter(ActionEvent event) {
+        boolean result = reg_name.getText().matches("[A-zА-я]*") || reg_surname.getText().matches("[A-zА-я]*") || reg_location.getText().matches("[A-zА-я]*");
         if(reg_name.getText() == "" && reg_surname.getText() == "" && reg_pas.getText() == "" && reg_location.getText() == "" && reg_log.getText() == ""){
             JOptionPane.showMessageDialog(null,"данные не введены");
         }
-        else if(reg_name.getText().equals("123")  || reg_surname.getText().equals("321") || reg_location.getText().equals("#4412")){
+        else if(result){
             JOptionPane.showMessageDialog(null,"данные введены неправильно");
         }
         else {

@@ -5,6 +5,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -50,7 +52,7 @@
          </children></AnchorPane>
       <AnchorPane layoutX="473.0" layoutY="64.0" prefHeight="48.0" prefWidth="90.0" style="-fx-background-color: #F5E6CB;">
          <children>
-            <Label alignment="CENTER" layoutX="6.0" layoutY="8.0" prefHeight="32.0" prefWidth="78.0" text="5500">
+            <Label alignment="CENTER" layoutX="6.0" layoutY="8.0" prefHeight="32.0" prefWidth="78.0" text="2500">
                <font>
                   <Font size="22.0" />
                </font>
@@ -63,7 +65,7 @@
       </Label>
       <AnchorPane layoutX="61.0" layoutY="266.0" prefHeight="48.0" prefWidth="78.0" style="-fx-background-color: #F5E6CB;">
          <children>
-            <Label fx:id="calories_label_product" alignment="CENTER" layoutX="-3.0" layoutY="8.0" prefHeight="32.0" prefWidth="90.0" text="1000">
+            <Label fx:id="calories_label_product" alignment="CENTER" layoutX="-3.0" layoutY="8.0" prefHeight="32.0" prefWidth="90.0" text="0">
                <font>
                   <Font size="22.0" />
                </font>
@@ -86,6 +88,10 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button fx:id="exitButton" layoutX="575.0" layoutY="2.0" mnemonicParsing="false" onAction="#exitClick" prefHeight="11.0" prefWidth="23.0" style="-fx-background-color: #FF2400;" text="x" />
+      <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="276.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/4997876.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
