@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 
+//метод подключения к бд
 public class DatabaseHandler extends Configs {
     Connection dbConnection;
    public Connection getDbConnection() throws ClassNotFoundException, SQLException{
@@ -16,7 +17,7 @@ public class DatabaseHandler extends Configs {
        return dbConnection;
    }
 
-
+//добавления продукта в бд
     public void add_products_db(Products products){
        String insert = "INSERT INTO " + Const.PRODUCTS_TABLE+"(" + Const.PRODUCTS_NAME + ","
                 + Const.PRODUCTS_CALLORIES + ", " + Const.PRODUCTS_GRAMES + ")" + "VALUES (?,?,?)";
@@ -34,6 +35,7 @@ public class DatabaseHandler extends Configs {
         }
     }
 
+    //регистрация нового пользователя
    public void signUpUser(User user){
        String insert = "INSERT INTO " + Const.USER_TABLE+"(" + Const.USER_FIRSTNAME + ","
                + Const.USER_LASTNAME + ", " + Const.USER_USERNAME + "," + Const.USER_PASSWORD
@@ -54,7 +56,7 @@ public class DatabaseHandler extends Configs {
        }
    }
 
-
+//проверка логина и пароля пользователя
    public ResultSet getUser(User user){
            ResultSet resSet = null;
 
