@@ -60,6 +60,7 @@ public class MainMenu extends Configs implements Initializable{
 
     JOptionPane JOptionPane;
 
+    //добавление продукта из текстфилдов в базу данных, путем соединения через другой объект класса
     @FXML
     void add_product_button(ActionEvent event){
         boolean result = text_prosuctName.getText().matches("[0-9]*") || text_callories_product.getText().matches("[A-zА-я]*") || text_weight_product.getText().matches("[A-zА-я]*");
@@ -102,6 +103,7 @@ public class MainMenu extends Configs implements Initializable{
         }
 
     }
+    //удаление продукта из базы данных по полученным в приложении из таблицы данных
     @FXML
     void delete_product_button(ActionEvent event) {
         list_products.getItems().clear();
@@ -160,7 +162,7 @@ public class MainMenu extends Configs implements Initializable{
 
     }
 
-
+    //метод получения индекса для выбора продукта
     public void OnSelectedProducts(MouseEvent mouseEvent) {
         try{
             int index = list_products.getSelectionModel().getSelectedIndex();
@@ -173,7 +175,7 @@ public class MainMenu extends Configs implements Initializable{
             System.out.println(exception.getMessage());
         }
     }
-
+    //кнопка назад
     public void back_button_active(ActionEvent actionEvent) {
         back_button.getScene().getWindow().hide();
 
