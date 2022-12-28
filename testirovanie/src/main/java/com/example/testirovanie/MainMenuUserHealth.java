@@ -63,6 +63,7 @@ public class MainMenuUserHealth implements Initializable {
 
     int index = -1;
 
+    //метод возвращения индекса
     @FXML
     void OnSelectedProducts(MouseEvent event) {
         try{
@@ -89,6 +90,7 @@ public class MainMenuUserHealth implements Initializable {
         }
         all_callories_label.setText(all_cal);
     }
+    //добавления калорий в счетчик, сам калькулятоо
     public void addAllCallories(){
         if(text_grame_product.getText().equals("")){
             JOptionPane.showMessageDialog(null,"данные  не введены");
@@ -114,6 +116,7 @@ public class MainMenuUserHealth implements Initializable {
             }
         }
         }
+    //клк на кнопку вызова методов для подсчета калорий и обновления значений
     @FXML
     void eating_product_button(ActionEvent event)  {
         boolean result = text_grame_product.getText().matches("[0-9]*");
@@ -132,6 +135,7 @@ public class MainMenuUserHealth implements Initializable {
         }
     }
 
+    //метод инициализирующий значения при запуске
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         name2 = name_user_qq.getText();
@@ -170,6 +174,7 @@ public class MainMenuUserHealth implements Initializable {
 
     }
 
+    //кнопка обнуления калорий
     @FXML
     void click_reset_button(ActionEvent event) throws Exception {
         labelTextAll();
@@ -186,6 +191,7 @@ public class MainMenuUserHealth implements Initializable {
         }
         labelTextAll();
     }
+    //кнопка назад
     public void back_button_active(ActionEvent actionEvent) {
         back_button_usermenu.getScene().getWindow().hide();
 
